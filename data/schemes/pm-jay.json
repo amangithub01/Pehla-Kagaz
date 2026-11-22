@@ -1,0 +1,31 @@
+{
+  "id": "pm-jay",
+  "name": { "en": "Ayushman Bharat PM-JAY", "te": "ఆయుష్మాన్ భారత్ పీఎం-జేఏవై" },
+  "level": "central",
+  "department": "National Health Authority",
+  "benefit": {
+    "en": "Health insurance cover for secondary and tertiary hospital care for eligible families.",
+    "te": "అర్హులైన కుటుంబాలకు ద్వితీయ మరియు తృతీయ ఆసుపత్రి చికిత్సకు ఆరోగ్య బీమా కవరేజ్."
+  },
+  "fee_inr": 0,
+  "rules": [
+    {
+      "id": "pm-jay-ration-card",
+      "field": "has_ration_card",
+      "op": "eq",
+      "value": true,
+      "explain": {
+        "en": "Must hold a ration card. UNVERIFIED: the official eligibility list is SECC-based; the alternative route (monthly income <= 10000) cannot be expressed with AND-only rules and is not checked here.",
+        "te": "రేషన్ కార్డు కలిగి ఉండాలి. UNVERIFIED: ధృవీకరించబడలేదు."
+      },
+      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+    }
+  ],
+  "documents": ["aadhaar_card", "ration_card", "income_certificate"],
+  "apply_steps": [],
+  "apply_url": "",
+  "source_url": "",
+  "last_verified": "UNVERIFIED",
+  "deadline": null,
+  "followup_days": 30
+}

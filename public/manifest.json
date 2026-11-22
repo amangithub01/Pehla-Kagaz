@@ -1,0 +1,9 @@
+{
+  "name": "Claim What's Yours",
+  "short_name": "Claim",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111827",
+  "lang": "en"
+}

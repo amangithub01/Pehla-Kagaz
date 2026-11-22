@@ -1,0 +1,80 @@
+[
+  {
+    "id": "ration_card",
+    "name": { "en": "Ration card", "te": "రేషన్ కార్డు" },
+    "issued_by": "Civil Supplies Department",
+    "where": "Mee Seva centre",
+    "fee_inr": 0,
+    "typical_days": 30,
+    "requires": [],
+    "source_url": "",
+    "last_verified": ""
+  },
+  {
+    "id": "bank_passbook",
+    "name": { "en": "Bank passbook", "te": "బ్యాంకు పాస్‌బుక్" },
+    "issued_by": "Your bank",
+    "where": "Bank branch",
+    "fee_inr": 0,
+    "typical_days": 3,
+    "requires": [],
+    "source_url": "",
+    "last_verified": ""
+  },
+  {
+    "id": "income_certificate",
+    "name": { "en": "Income certificate", "te": "ఆదాయ ధృవీకరణ పత్రం" },
+    "issued_by": "Revenue Department",
+    "where": "Mee Seva centre",
+    "fee_inr": 0,
+    "typical_days": 7,
+    "validity_months": 12,
+    "requires": ["ration_card"],
+    "source_url": "",
+    "last_verified": ""
+  },
+  {
+    "id": "aadhaar_card",
+    "name": { "en": "Aadhaar card", "te": "ఆధార్ కార్డు" },
+    "issued_by": "UIDAI",
+    "where": "Aadhaar enrolment centre or Mee Seva centre",
+    "fee_inr": 0,
+    "typical_days": 15,
+    "requires": [],
+    "source_url": "",
+    "last_verified": "UNVERIFIED"
+  },
+  {
+    "id": "e_shram_card",
+    "name": { "en": "e-Shram card", "te": "ఇ-శ్రమ్ కార్డు" },
+    "issued_by": "Ministry of Labour",
+    "where": "CSC (Common Service Centre)",
+    "fee_inr": 0,
+    "typical_days": 1,
+    "requires": ["aadhaar_card"],
+    "source_url": "",
+    "last_verified": "UNVERIFIED"
+  },
+  {
+    "id": "vendor_certificate",
+    "name": { "en": "Street vendor certificate (Certificate of Vending)", "te": "వీధి వ్యాపారి ధృవీకరణ పత్రం" },
+    "issued_by": "Urban Local Body",
+    "where": "Municipal office or CSC (Common Service Centre)",
+    "fee_inr": 0,
+    "typical_days": 7,
+    "requires": ["aadhaar_card"],
+    "source_url": "",
+    "last_verified": "UNVERIFIED"
+  },
+  {
+    "id": "artisan_certificate",
+    "name": { "en": "Artisan certificate", "te": "హస్తకళాకారుని ధృవీకరణ పత్రం" },
+    "issued_by": "Ministry of MSME",
+    "where": "CSC (Common Service Centre) or Vishwakarma portal",
+    "fee_inr": 0,
+    "typical_days": 7,
+    "requires": ["aadhaar_card"],
+    "source_url": "",
+    "last_verified": "UNVERIFIED"
+  }
+]

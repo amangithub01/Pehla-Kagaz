@@ -1,0 +1,31 @@
+{
+  "id": "pm-svanidhi",
+  "name": { "en": "PM SVANidhi", "te": "పీఎం స్వనిధి" },
+  "level": "central",
+  "department": "Ministry of Housing and Urban Affairs",
+  "benefit": {
+    "en": "Collateral-free working capital loan for street vendors to restart or expand their business, released in three tranches (amounts UNVERIFIED, not yet checked against the official scheme).",
+    "te": "వీధి వ్యాపారులకు తిరిగి వ్యాపారం ప్రారంభించడానికి లేదా విస్తరించడానికి పూచీకత్తు లేని వర్కింగ్ క్యాపిటల్ రుణం; మూడు విడతలలో అందిస్తారు (మొత్తాలు UNVERIFIED, ఇంకా ధృవీకరించబడలేదు)."
+  },
+  "fee_inr": 0,
+  "rules": [
+    {
+      "id": "pm-svanidhi-age",
+      "field": "age",
+      "op": "gte",
+      "value": 18,
+      "explain": {
+        "en": "Age must be at least {value}. PLACEHOLDER: street-vendor status has no Profile field, so only age is checked here.",
+        "te": "వయసు కనీసం {value} ఉండాలి. PLACEHOLDER: ధృవీకరించబడలేదు."
+      },
+      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+    }
+  ],
+  "documents": ["aadhaar_card", "vendor_certificate", "bank_passbook"],
+  "apply_steps": [],
+  "apply_url": "",
+  "source_url": "",
+  "last_verified": "UNVERIFIED",
+  "deadline": null,
+  "followup_days": 30
+}

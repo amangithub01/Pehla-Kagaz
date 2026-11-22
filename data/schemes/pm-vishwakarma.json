@@ -1,0 +1,42 @@
+{
+  "id": "pm-vishwakarma",
+  "name": { "en": "PM Vishwakarma", "te": "పీఎం విశ్వకర్మ" },
+  "level": "central",
+  "department": "Ministry of MSME",
+  "benefit": {
+    "en": "Support, skill training, toolkit incentive and credit for artisans and craftspeople.",
+    "te": "హస్తకళాకారులు మరియు చేతివృత్తుల వారికి మద్దతు, నైపుణ్య శిక్షణ, టూల్‌కిట్ ప్రోత్సాహకం మరియు రుణం."
+  },
+  "fee_inr": 0,
+  "rules": [
+    {
+      "id": "pm-vishwakarma-age",
+      "field": "age",
+      "op": "gte",
+      "value": 18,
+      "explain": {
+        "en": "Age must be at least {value}. PLACEHOLDER: artisan occupation has no Profile field, so only age is checked here.",
+        "te": "వయసు కనీసం {value} ఉండాలి. PLACEHOLDER: ధృవీకరించబడలేదు."
+      },
+      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+    },
+    {
+      "id": "pm-vishwakarma-tax",
+      "field": "is_income_taxpayer",
+      "op": "eq",
+      "value": false,
+      "explain": {
+        "en": "Must not be an income taxpayer. PLACEHOLDER: not verified against official criteria.",
+        "te": "ఆదాయపు పన్ను చెల్లింపుదారు కాకూడదు. PLACEHOLDER: ధృవీకరించబడలేదు."
+      },
+      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+    }
+  ],
+  "documents": ["aadhaar_card", "artisan_certificate", "bank_passbook"],
+  "apply_steps": [],
+  "apply_url": "",
+  "source_url": "",
+  "last_verified": "UNVERIFIED",
+  "deadline": null,
+  "followup_days": 30
+}

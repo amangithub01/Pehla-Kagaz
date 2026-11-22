@@ -1,0 +1,53 @@
+{
+  "id": "e-shram",
+  "name": { "en": "e-Shram (National Database of Unorganised Workers)", "te": "ఇ-శ్రమ్ (అసంఘటిత కార్మికుల జాతీయ డేటాబేస్)" },
+  "level": "central",
+  "department": "Ministry of Labour and Employment",
+  "benefit": {
+    "en": "Registration as an unorganised worker, giving access to welfare schemes and accident insurance coverage.",
+    "te": "అసంఘటిత కార్మికునిగా నమోదు, సంక్షేమ పథకాలు మరియు ప్రమాద బీమా సౌకర్యం."
+  },
+  "fee_inr": 0,
+  "rules": [
+    {
+      "id": "e-shram-age",
+      "field": "age",
+      "op": "between",
+      "value": [16, 59],
+      "explain": {
+        "en": "Age must be between {low} and {high}.",
+        "te": "వయసు {low} మరియు {high} మధ్య ఉండాలి."
+      },
+      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+    },
+    {
+      "id": "e-shram-formal",
+      "field": "in_epfo_esic_nps",
+      "op": "eq",
+      "value": false,
+      "explain": {
+        "en": "Must not be enrolled in EPFO, ESIC or NPS.",
+        "te": "EPFO, ESIC లేదా NPS లో నమోదు కాకూడదు."
+      },
+      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+    },
+    {
+      "id": "e-shram-tax",
+      "field": "is_income_taxpayer",
+      "op": "eq",
+      "value": false,
+      "explain": {
+        "en": "Must not be an income taxpayer.",
+        "te": "ఆదాయపు పన్ను చెల్లింపుదారు కాకూడదు."
+      },
+      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+    }
+  ],
+  "documents": ["aadhaar_card", "bank_passbook", "e_shram_card"],
+  "apply_steps": [],
+  "apply_url": "",
+  "source_url": "",
+  "last_verified": "UNVERIFIED",
+  "deadline": null,
+  "followup_days": 30
+}
