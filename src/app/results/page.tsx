@@ -114,9 +114,9 @@ function ResultCard({ r, lang }: { r: SchemeResult; lang: Lang }) {
           {L[lang].why}
         </summary>
         <ul className="mt-2.5 flex flex-col gap-2 pt-2 border-t border-gray-200 text-xs">
-          {r.checks.map((c) => (
+          {r.checks.map((c, idx) => (
             <li
-              key={c.rule.id}
+              key={c.rule.id || idx}
               className={`flex items-start gap-2 ${
                 c.status === "pass"
                   ? "text-green-900"
@@ -178,8 +178,10 @@ export default function ResultsPage() {
   const [lang] = useLocal<Lang>("lang", "en");
   const [profile] = useLocal<Profile>("profile", {});
   const [data, setData] = useState<Data | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     fetch("/api/schemes")
       .then((r) => r.json())
       .then((d: Data) => setData(d))
@@ -191,10 +193,10 @@ export default function ResultsPage() {
     [data, profile],
   );
 
-  if (data === null) {
+  if (!mounted || data === null) {
     return (
       <main className="mx-auto w-full max-w-3xl p-6 text-center text-gray-500 py-24">
-        <p className="text-base">{L[lang].loading}</p>
+        <p className="text-base">Loading schemes...</p>
       </main>
     );
   }
