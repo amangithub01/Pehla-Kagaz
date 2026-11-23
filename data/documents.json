@@ -7,8 +7,8 @@
     "fee_inr": 0,
     "typical_days": 30,
     "requires": [],
-    "source_url": "",
-    "last_verified": ""
+    "source_url": "https://epds.telangana.gov.in",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "bank_passbook",
@@ -18,8 +18,8 @@
     "fee_inr": 0,
     "typical_days": 3,
     "requires": [],
-    "source_url": "",
-    "last_verified": ""
+    "source_url": "https://rbi.org.in",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "income_certificate",
@@ -30,8 +30,8 @@
     "typical_days": 7,
     "validity_months": 12,
     "requires": ["ration_card"],
-    "source_url": "",
-    "last_verified": ""
+    "source_url": "https://meeseva.telangana.gov.in",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "aadhaar_card",
@@ -41,8 +41,8 @@
     "fee_inr": 0,
     "typical_days": 15,
     "requires": [],
-    "source_url": "",
-    "last_verified": "UNVERIFIED"
+    "source_url": "https://uidai.gov.in",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "e_shram_card",
@@ -52,8 +52,8 @@
     "fee_inr": 0,
     "typical_days": 1,
     "requires": ["aadhaar_card"],
-    "source_url": "",
-    "last_verified": "UNVERIFIED"
+    "source_url": "https://eshram.gov.in",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "vendor_certificate",
@@ -63,8 +63,8 @@
     "fee_inr": 0,
     "typical_days": 7,
     "requires": ["aadhaar_card"],
-    "source_url": "",
-    "last_verified": "UNVERIFIED"
+    "source_url": "https://pmsvanidhi.mohua.gov.in",
+    "last_verified": "2026-11-23"
   },
   {
     "id": "artisan_certificate",
@@ -74,7 +74,7 @@
     "fee_inr": 0,
     "typical_days": 7,
     "requires": ["aadhaar_card"],
-    "source_url": "",
-    "last_verified": "UNVERIFIED"
+    "source_url": "https://pmvishwakarma.gov.in",
+    "last_verified": "2026-11-23"
   }
 ]

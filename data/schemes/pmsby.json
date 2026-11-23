@@ -1,0 +1,50 @@
+{
+  "id": "pmsby",
+  "name": {
+    "en": "PM Suraksha Bima Yojana (PMSBY)",
+    "te": "పీఎం సురక్షా బీమా యోజన"
+  },
+  "level": "central",
+  "department": "Department of Financial Services, Ministry of Finance",
+  "benefit": {
+    "en": "Accidental death and disability insurance cover of Rs. 2 lakh for death/permanent total disability and Rs. 1 lakh for permanent partial disability for just Rs. 20/year premium.",
+    "te": "ప్రమాదవశాత్తు మరణం లేదా శాశ్వత వైకల్యానికి రూ. 2 లక్షలు, పాక్షిక వైకల్యానికి రూ. 1 లక్ష ప్రమాద బీమా రక్షణ (సంవత్సరానికి రూ. 20 ప్రీమియం)."
+  },
+  "fee_inr": 20,
+  "rules": [
+    {
+      "id": "pmsby-age",
+      "field": "age",
+      "op": "between",
+      "value": [18, 70],
+      "explain": {
+        "en": "Age must be between 18 and 70 years.",
+        "te": "వయసు 18 మరియు 70 సంవత్సరాల మధ్య ఉండాలి."
+      },
+      "source_clause": "The scheme is available to people in the age group 18 to 70 years with a bank account."
+    },
+    {
+      "id": "pmsby-bank",
+      "field": "has_bank_account",
+      "op": "eq",
+      "value": true,
+      "explain": {
+        "en": "Must have an active savings bank account with auto-debit consent.",
+        "te": "ఆటో-డెబిట్ సమ్మతితో సక్రియ బ్యాంక్ ఖాతా కలిగి ఉండాలి."
+      },
+      "source_clause": "Individuals must hold an active savings bank account in participating banks."
+    }
+  ],
+  "documents": ["aadhaar_card", "bank_passbook"],
+  "apply_steps": [
+    {
+      "en": "Submit the consent-cum-declaration form to your bank branch or activate via netbanking.",
+      "te": "బ్యాంక్ శాఖలో దరఖాస్తు ఫారమ్ సమర్పించండి లేదా నెట్‌బ్యాంకింగ్ ద్వారా సక్రియం చేయండి."
+    }
+  ],
+  "apply_url": "https://www.jansuraksha.gov.in",
+  "source_url": "https://financialservices.gov.in",
+  "last_verified": "2026-11-23",
+  "deadline": null,
+  "followup_days": 15
+}

@@ -1,0 +1,50 @@
+{
+  "id": "pmjjby",
+  "name": {
+    "en": "PM Jeevan Jyoti Bima Yojana (PMJJBY)",
+    "te": "పీఎం జీవన్ జ్యోతి బీమా యోజన"
+  },
+  "level": "central",
+  "department": "Department of Financial Services, Ministry of Finance",
+  "benefit": {
+    "en": "Life insurance cover of Rs. 2 lakh for death due to any reason for an annual premium of Rs. 436.",
+    "te": "ఏ కారణం చేతనైనా మరణం సంభవిస్తే రూ. 2 లక్షల జీవిత బీమా రక్షణ (సంవత్సరానికి రూ. 436)."
+  },
+  "fee_inr": 436,
+  "rules": [
+    {
+      "id": "pmjjby-age",
+      "field": "age",
+      "op": "between",
+      "value": [18, 50],
+      "explain": {
+        "en": "Age must be between 18 and 50 years.",
+        "te": "వయసు 18 మరియు 50 సంవత్సరాల మధ్య ఉండాలి."
+      },
+      "source_clause": "The scheme is available to people in the age group 18 to 50 years having a savings bank account."
+    },
+    {
+      "id": "pmjjby-bank",
+      "field": "has_bank_account",
+      "op": "eq",
+      "value": true,
+      "explain": {
+        "en": "Must have an active savings bank account with auto-debit consent.",
+        "te": "ఆటో-డెబిట్ సమ్మతితో సక్రియ బ్యాంక్ ఖాతా కలిగి ఉండాలి."
+      },
+      "source_clause": "Individuals must hold an active savings bank account in participating banks."
+    }
+  ],
+  "documents": ["aadhaar_card", "bank_passbook"],
+  "apply_steps": [
+    {
+      "en": "Submit enrollment form at your bank branch or activate through mobile banking.",
+      "te": "బ్యాంక్ శాఖలో నమోదు ఫారం సమర్పించండి లేదా మొబైల్ బ్యాంకింగ్ ద్వారా సక్రియం చేయండి."
+    }
+  ],
+  "apply_url": "https://www.jansuraksha.gov.in",
+  "source_url": "https://financialservices.gov.in",
+  "last_verified": "2026-11-23",
+  "deadline": null,
+  "followup_days": 15
+}

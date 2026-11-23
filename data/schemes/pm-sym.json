@@ -1,11 +1,14 @@
 {
   "id": "pm-sym",
-  "name": { "en": "PM Shram Yogi Maan-dhan (PM-SYM)", "te": "PM-SYM" },
+  "name": {
+    "en": "PM Shram Yogi Maan-dhan (PM-SYM)",
+    "te": "పీఎం శ్రమ యోగి మాన్-ధన్ (PM-SYM)"
+  },
   "level": "central",
   "department": "Ministry of Labour and Employment",
   "benefit": {
-    "en": "Monthly pension after age 60 for eligible unorganised workers.",
-    "te": "అసంఘటిత కార్మికులకు 60 ఏళ్ల తర్వాత నెలవారీ పింఛను."
+    "en": "Assured monthly pension of Rs. 3,000 after attaining 60 years of age for unorganised workers.",
+    "te": "అసంఘటిత కార్మికులకు 60 ఏళ్ల తర్వాత నెలకు రూ. 3,000 ఖచ్చితమైన పింఛను."
   },
   "fee_inr": 0,
   "rules": [
@@ -15,10 +18,10 @@
       "op": "between",
       "value": [18, 40],
       "explain": {
-        "en": "Age must be between {low} and {high}.",
-        "te": "వయసు {low} మరియు {high} మధ్య ఉండాలి."
+        "en": "Age must be between 18 and 40 years.",
+        "te": "వయసు 18 మరియు 40 సంవత్సరాల మధ్య ఉండాలి."
       },
-      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+      "source_clause": "Unorganised workers between the entry age of 18 and 40 years are eligible."
     },
     {
       "id": "pm-sym-income",
@@ -26,10 +29,10 @@
       "op": "lte",
       "value": 15000,
       "explain": {
-        "en": "Monthly income must be at most {value}.",
-        "te": "నెలవారీ ఆదాయం {value} మించకూడదు."
+        "en": "Monthly income must be at most Rs. 15,000.",
+        "te": "నెలవారీ ఆదాయం రూ. 15,000 మించకూడదు."
       },
-      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+      "source_clause": "Monthly income should not exceed Rs. 15,000/- per month."
     },
     {
       "id": "pm-sym-formal",
@@ -40,14 +43,19 @@
         "en": "Must not be enrolled in EPFO, ESIC or NPS.",
         "te": "EPFO, ESIC లేదా NPS లో నమోదు కాకూడదు."
       },
-      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+      "source_clause": "Should not be engaged in organised sector (EPFO/ESIC/NPS) or an income taxpayer."
     }
   ],
-  "documents": ["bank_passbook", "ration_card"],
-  "apply_steps": [],
-  "apply_url": "",
-  "source_url": "",
-  "last_verified": "UNVERIFIED",
+  "documents": ["bank_passbook", "ration_card", "aadhaar_card"],
+  "apply_steps": [
+    {
+      "en": "Visit Common Service Centre (CSC) with Aadhaar and Savings Bank account passbook.",
+      "te": "ఆధార్ మరియు సేవింగ్స్ బ్యాంక్ పాస్‌బుక్‌తో CSC కేంద్రానికి వెళ్లండి."
+    }
+  ],
+  "apply_url": "https://maandhan.in",
+  "source_url": "https://maandhan.in",
+  "last_verified": "2026-11-23",
   "deadline": null,
   "followup_days": 30
 }

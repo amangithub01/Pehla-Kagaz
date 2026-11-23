@@ -1,0 +1,50 @@
+{
+  "id": "aarogyasri",
+  "name": {
+    "en": "Telangana Rajiv Aarogyasri",
+    "te": "తెలంగాణ రాజీవ్ ఆరోగ్యశ్రీ"
+  },
+  "level": "state",
+  "department": "Aarogyasri Health Care Trust, Government of Telangana",
+  "benefit": {
+    "en": "Financial coverage for hospitalization and surgeries up to Rs. 10 lakh for eligible families in Telangana across corporate and government network hospitals.",
+    "te": "తెలంగాణలోని అర్హులైన కుటుంబాలకు రూ. 10 లక్షల వరకు ఉచిత కార్పొరేట్ వైద్య చికిత్స మరియు శస్త్రచికిత్సల కవరేజ్."
+  },
+  "fee_inr": 0,
+  "rules": [
+    {
+      "id": "aarogyasri-ration-card",
+      "field": "has_ration_card",
+      "op": "eq",
+      "value": true,
+      "explain": {
+        "en": "Must hold a valid Food Security Card (White Ration Card) in Telangana.",
+        "te": "తెలంగాణలో చెల్లుబాటు అయ్యే ఆహార భద్రతా కార్డు (తెల్ల రేషన్ కార్డు) కలిగి ఉండాలి."
+      },
+      "source_clause": "Beneficiaries are families holding a valid Food Security Card (White Ration Card) issued by Civil Supplies Department."
+    },
+    {
+      "id": "aarogyasri-tax",
+      "field": "is_income_taxpayer",
+      "op": "eq",
+      "value": false,
+      "explain": {
+        "en": "Family members must not be income taxpayers.",
+        "te": "కుటుంబ సభ్యులు ఆదాయపు పన్ను చెల్లింపుదారులు కాకూడదు."
+      },
+      "source_clause": "Families of income tax payers and government employees are excluded from the scheme."
+    }
+  ],
+  "documents": ["aadhaar_card", "ration_card", "income_certificate"],
+  "apply_steps": [
+    {
+      "en": "Visit network hospital or Aarogya Mithra desk with your Food Security Card and Aadhaar.",
+      "te": "మీ ఆహార భద్రతా కార్డు మరియు ఆధార్‌తో నెట్‌వర్క్ ఆసుపత్రి లేదా ఆరోగ్య మిత్ర డెస్క్‌ని సందర్శించండి."
+    }
+  ],
+  "apply_url": "https://aarogyasri.telangana.gov.in",
+  "source_url": "https://aarogyasri.telangana.gov.in",
+  "last_verified": "2026-11-23",
+  "deadline": null,
+  "followup_days": 15
+}

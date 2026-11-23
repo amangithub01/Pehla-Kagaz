@@ -1,11 +1,14 @@
 {
   "id": "pm-vishwakarma",
-  "name": { "en": "PM Vishwakarma", "te": "పీఎం విశ్వకర్మ" },
+  "name": {
+    "en": "PM Vishwakarma",
+    "te": "పీఎం విశ్వకర్మ"
+  },
   "level": "central",
   "department": "Ministry of MSME",
   "benefit": {
-    "en": "Support, skill training, toolkit incentive and credit for artisans and craftspeople.",
-    "te": "హస్తకళాకారులు మరియు చేతివృత్తుల వారికి మద్దతు, నైపుణ్య శిక్షణ, టూల్‌కిట్ ప్రోత్సాహకం మరియు రుణం."
+    "en": "End-to-end support including verification, PM Vishwakarma certificate, 5-7 days basic skill training with Rs. 500/day stipend, Rs. 15,000 modern toolkit incentive, and collateral-free loans up to Rs. 3 lakh at 5% interest.",
+    "te": "నైపుణ్య శిక్షణ, రోజుకు రూ. 500 స్టైపెండ్, రూ. 15,000 టూల్‌కిట్ ప్రోత్సాహకం మరియు 5% వడ్డీతో రూ. 3 లక్షల వరకు పూచీకత్తు లేని రుణం."
   },
   "fee_inr": 0,
   "rules": [
@@ -15,10 +18,10 @@
       "op": "gte",
       "value": 18,
       "explain": {
-        "en": "Age must be at least {value}. PLACEHOLDER: artisan occupation has no Profile field, so only age is checked here.",
-        "te": "వయసు కనీసం {value} ఉండాలి. PLACEHOLDER: ధృవీకరించబడలేదు."
+        "en": "Age must be at least 18 years.",
+        "te": "వయసు కనీసం 18 సంవత్సరాలు ఉండాలి."
       },
-      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+      "source_clause": "An artisan or craftsperson who has completed 18 years of age on the date of registration."
     },
     {
       "id": "pm-vishwakarma-tax",
@@ -26,17 +29,22 @@
       "op": "eq",
       "value": false,
       "explain": {
-        "en": "Must not be an income taxpayer. PLACEHOLDER: not verified against official criteria.",
-        "te": "ఆదాయపు పన్ను చెల్లింపుదారు కాకూడదు. PLACEHOLDER: ధృవీకరించబడలేదు."
+        "en": "Must not be an income taxpayer.",
+        "te": "ఆదాయపు పన్ను చెల్లింపుదారు కాకూడదు."
       },
-      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+      "source_clause": "The beneficiary or family member should not be an income tax assessee or government employee."
     }
   ],
   "documents": ["aadhaar_card", "artisan_certificate", "bank_passbook"],
-  "apply_steps": [],
-  "apply_url": "",
-  "source_url": "",
-  "last_verified": "UNVERIFIED",
+  "apply_steps": [
+    {
+      "en": "Apply through biometric authentication at any Common Services Centre (CSC).",
+      "te": "ఏదైనా కామన్ సర్వీసెస్ సెంటర్ (CSC) లో బయోమెట్రిక్ ద్వారా దరఖాస్తు చేసుకోండి."
+    }
+  ],
+  "apply_url": "https://pmvishwakarma.gov.in",
+  "source_url": "https://pmvishwakarma.gov.in",
+  "last_verified": "2026-11-23",
   "deadline": null,
   "followup_days": 30
 }

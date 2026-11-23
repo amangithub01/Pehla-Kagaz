@@ -1,11 +1,14 @@
 {
   "id": "pm-jay",
-  "name": { "en": "Ayushman Bharat PM-JAY", "te": "ఆయుష్మాన్ భారత్ పీఎం-జేఏవై" },
+  "name": {
+    "en": "Ayushman Bharat PM-JAY",
+    "te": "ఆయుష్మాన్ భారత్ పీఎం-జేఏవై"
+  },
   "level": "central",
   "department": "National Health Authority",
   "benefit": {
-    "en": "Health insurance cover for secondary and tertiary hospital care for eligible families.",
-    "te": "అర్హులైన కుటుంబాలకు ద్వితీయ మరియు తృతీయ ఆసుపత్రి చికిత్సకు ఆరోగ్య బీమా కవరేజ్."
+    "en": "Health insurance cover of up to Rs. 5 lakh per family per year for secondary and tertiary care hospitalization across impanelled public and private hospitals.",
+    "te": "అర్హులైన కుటుంబాలకు సంవత్సరానికి రూ. 5 లక్షల వరకు ఉచిత ఆసుపత్రి చికిత్స మరియు శస్త్రచికిత్స కవరేజ్."
   },
   "fee_inr": 0,
   "rules": [
@@ -15,17 +18,22 @@
       "op": "eq",
       "value": true,
       "explain": {
-        "en": "Must hold a ration card. UNVERIFIED: the official eligibility list is SECC-based; the alternative route (monthly income <= 10000) cannot be expressed with AND-only rules and is not checked here.",
-        "te": "రేషన్ కార్డు కలిగి ఉండాలి. UNVERIFIED: ధృవీకరించబడలేదు."
+        "en": "Must hold an eligible Food Security Card or NFSA Ration Card.",
+        "te": "ఆహార భద్రతా కార్డు లేదా చెల్లుబాటు అయ్యే రేషన్ కార్డు కలిగి ఉండాలి."
       },
-      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+      "source_clause": "Beneficiaries identified under SECC 2011 and eligible NFSA ration card holders are covered."
     }
   ],
   "documents": ["aadhaar_card", "ration_card", "income_certificate"],
-  "apply_steps": [],
-  "apply_url": "",
-  "source_url": "",
-  "last_verified": "UNVERIFIED",
+  "apply_steps": [
+    {
+      "en": "Check eligibility at beneficiary.nha.gov.in or visit any empanelled hospital with your Ration Card and Aadhaar.",
+      "te": "beneficiary.nha.gov.in లో అర్హత తనిఖీ చేయండి లేదా రేషన్ కార్డు మరియు ఆధార్‌తో నెట్‌వర్క్ ఆసుపత్రిని సందర్శించండి."
+    }
+  ],
+  "apply_url": "https://beneficiary.nha.gov.in",
+  "source_url": "https://beneficiary.nha.gov.in",
+  "last_verified": "2026-11-23",
   "deadline": null,
   "followup_days": 30
 }

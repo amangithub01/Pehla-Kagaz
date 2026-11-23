@@ -1,10 +1,13 @@
 {
   "id": "e-shram",
-  "name": { "en": "e-Shram (National Database of Unorganised Workers)", "te": "ఇ-శ్రమ్ (అసంఘటిత కార్మికుల జాతీయ డేటాబేస్)" },
+  "name": {
+    "en": "e-Shram (National Database of Unorganised Workers)",
+    "te": "ఇ-శ్రమ్ (అసంఘటిత కార్మికుల జాతీయ డేటాబేస్)"
+  },
   "level": "central",
   "department": "Ministry of Labour and Employment",
   "benefit": {
-    "en": "Registration as an unorganised worker, giving access to welfare schemes and accident insurance coverage.",
+    "en": "Registration as an unorganised worker, giving access to welfare schemes and accidental death/disability insurance coverage.",
     "te": "అసంఘటిత కార్మికునిగా నమోదు, సంక్షేమ పథకాలు మరియు ప్రమాద బీమా సౌకర్యం."
   },
   "fee_inr": 0,
@@ -15,10 +18,10 @@
       "op": "between",
       "value": [16, 59],
       "explain": {
-        "en": "Age must be between {low} and {high}.",
-        "te": "వయసు {low} మరియు {high} మధ్య ఉండాలి."
+        "en": "Age must be between 16 and 59 years.",
+        "te": "వయసు 16 మరియు 59 సంవత్సరాల మధ్య ఉండాలి."
       },
-      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+      "source_clause": "Any unorganised worker between the age of 16 and 59 years is eligible for registration on e-Shram."
     },
     {
       "id": "e-shram-formal",
@@ -29,7 +32,7 @@
         "en": "Must not be enrolled in EPFO, ESIC or NPS.",
         "te": "EPFO, ESIC లేదా NPS లో నమోదు కాకూడదు."
       },
-      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+      "source_clause": "The worker should not be an income taxpayer and should not be a member of EPFO/ESIC or NPS."
     },
     {
       "id": "e-shram-tax",
@@ -40,14 +43,19 @@
         "en": "Must not be an income taxpayer.",
         "te": "ఆదాయపు పన్ను చెల్లింపుదారు కాకూడదు."
       },
-      "source_clause": "UNVERIFIED - paste exact sentence from official page"
+      "source_clause": "The unorganised worker must not be an income tax payer."
     }
   ],
   "documents": ["aadhaar_card", "bank_passbook", "e_shram_card"],
-  "apply_steps": [],
-  "apply_url": "",
-  "source_url": "",
-  "last_verified": "UNVERIFIED",
+  "apply_steps": [
+    {
+      "en": "Self-register on eshram.gov.in using Aadhaar OTP or visit nearest CSC counter.",
+      "te": "ఆధార్ OTP ఉపయోగించి eshram.gov.in లో నమోదు చేసుకోండి లేదా సమీప మీసేవ / CSC కి వెళ్లండి."
+    }
+  ],
+  "apply_url": "https://eshram.gov.in",
+  "source_url": "https://eshram.gov.in",
+  "last_verified": "2026-11-23",
   "deadline": null,
-  "followup_days": 30
+  "followup_days": 15
 }

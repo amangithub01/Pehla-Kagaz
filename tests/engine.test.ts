@@ -3,7 +3,7 @@ import { evalScheme, evalAll } from "../src/lib/engine/evaluate";
 import { planDocuments, requiredDocs } from "../src/lib/engine/docGraph";
 import { compareNames } from "../src/lib/engine/preflight";
 import { scrub } from "../src/lib/engine/scrub";
-import type { DocumentDef, Rule, Scheme } from "../src/lib/engine/types";
+import type { DocumentDef, Profile, Rule, Scheme } from "../src/lib/engine/types";
 
 const base = {
   department: "Test Dept",
@@ -163,5 +163,78 @@ describe("scrub", () => {
     expect(removed).toBeGreaterThan(0);
     expect(clean).not.toContain("1234");
     expect(clean).toContain("35");
+  });
+});
+
+describe("personas against 8 schemes", () => {
+  const aarogyasriScheme: Scheme = {
+    ...base,
+    id: "aarogyasri",
+    name: { en: "Aarogyasri", te: "ఆరోగ్యశ్రీ" },
+    rules: [
+      makeRule("rc", "has_ration_card", "eq", true),
+      makeRule("tax", "is_income_taxpayer", "eq", false),
+    ],
+    documents: ["aadhaar_card", "ration_card", "income_certificate"],
+  };
+
+  const pmsbyScheme: Scheme = {
+    ...base,
+    id: "pmsby",
+    name: { en: "PMSBY", te: "పీఎంఎస్బీవై" },
+    rules: [
+      makeRule("age", "age", "between", [18, 70]),
+      makeRule("bank", "has_bank_account", "eq", true),
+    ],
+    documents: ["aadhaar_card", "bank_passbook"],
+  };
+
+  const pmjjbyScheme: Scheme = {
+    ...base,
+    id: "pmjjby",
+    name: { en: "PMJJBY", te: "పీఎంజేజేబీవై" },
+    rules: [
+      makeRule("age", "age", "between", [18, 50]),
+      makeRule("bank", "has_bank_account", "eq", true),
+    ],
+    documents: ["aadhaar_card", "bank_passbook"],
+  };
+
+  const pmsymScheme: Scheme = {
+    ...base,
+    id: "pm-sym",
+    name: { en: "PM-SYM", te: "పీఎం-ఎస్వైఎం" },
+    rules: [
+      makeRule("age", "age", "between", [18, 40]),
+      makeRule("income", "monthly_income", "lte", 15000),
+      makeRule("formal", "in_epfo_esic_nps", "eq", false),
+    ],
+    documents: ["bank_passbook", "ration_card"],
+  };
+
+  it("persona a is likely eligible for Aarogyasri, PMSBY, PMJJBY, and PM-SYM", async () => {
+    const personaA = (await import("../data/personas/a.json")).default as unknown as Profile;
+    expect(evalScheme(aarogyasriScheme, personaA).verdict).toBe("likely_eligible");
+    expect(evalScheme(pmsbyScheme, personaA).verdict).toBe("likely_eligible");
+    expect(evalScheme(pmjjbyScheme, personaA).verdict).toBe("likely_eligible");
+    expect(evalScheme(pmsymScheme, personaA).verdict).toBe("likely_eligible");
+  });
+
+  it("persona b fails PM-SYM age and income limits but qualifies for PMSBY & PMJJBY", async () => {
+    const personaB = (await import("../data/personas/b.json")).default as unknown as Profile;
+    expect(evalScheme(pmsymScheme, personaB).verdict).toBe("not_eligible");
+    expect(evalScheme(pmsbyScheme, personaB).verdict).toBe("likely_eligible");
+    expect(evalScheme(pmjjbyScheme, personaB).verdict).toBe("likely_eligible");
+  });
+
+  it("persona c has missing fields and yields need_info for bank & ration card schemes", async () => {
+    const personaC = (await import("../data/personas/c.json")).default as unknown as Profile;
+    const resPmsby = evalScheme(pmsbyScheme, personaC);
+    expect(resPmsby.verdict).toBe("need_info");
+    expect(resPmsby.missingFields).toContain("has_bank_account");
+
+    const resAarogya = evalScheme(aarogyasriScheme, personaC);
+    expect(resAarogya.verdict).toBe("need_info");
+    expect(resAarogya.missingFields).toContain("has_ration_card");
   });
 });
